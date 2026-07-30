@@ -7,5 +7,7 @@ for i in arr:
 
 if total>max:
 	discount = total-max
+	print(max, discount)
 
-print(max, discount)
+else :
+	print(total, discount)
