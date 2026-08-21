@@ -1,12 +1,12 @@
-a= int(input())
-arr1 = list(input().split())
-b= int(input())
-arr2 = list(input().split())
-arr3 = []
-for i in arr2:
-	 if i in arr1:
-		 arr3.append(i)
+a = int(input())
+scores = {}
+for i in range(a):
+	team,score = input().split()
+	score = int(score)
+	if team in scores:
+		scores[team] += score
+	else:
+		scores[team] = score
 
-print(len(arr3))
-for i in arr3:
-	print(i,end=' ')
+for i in sorted(scores.keys()):
+	print(i,scores[i])

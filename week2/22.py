@@ -1,9 +1,11 @@
-c,r = map(int,input().split())
-arr = []
-for i in range(c):
-	a = list(map(int,input().split()))
-	arr.append(sum(a))
+a = int(input())
+festivals = []
+for i in range(a):
+	b,c,d = input().split()
+	
+	festivals.append((int(c),int(d),b))
+festivals.sort()
 
-
-for i in arr:
-	print(i,end=' ')
+for i in festivals:
+	print(i[2],end = ' ')
+	

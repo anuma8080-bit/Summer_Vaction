@@ -1,12 +1,17 @@
 a = int(input())
-scores = {}
+arr = [a]
 for i in range(a):
-	team,score = input().split()
-	score = int(score)
-	if team in scores:
-		scores[team] += score
-	else:
-		scores[team] = score
+	b,c = input().split()
+	arr.append(b)
+	arr.append(c)
 
-for i in sorted(scores.keys()):
-	print(i,scores[i])
+f = int(input())
+for i in range(f):
+	d = input()
+	if d in arr:
+		for j in range(a*2):
+			if arr[j] == d:
+				print(arr[j+1])
+	else:
+		print(-1)
+		

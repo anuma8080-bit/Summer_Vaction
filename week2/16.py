@@ -1,17 +1,11 @@
-a = int(input())
-arr = [a]
-for i in range(a):
-	b,c = input().split()
-	arr.append(b)
-	arr.append(c)
+p,m = map(int,input().split())
+arr = []
+people = []
+for i in range(p):
+	arr = input().split()
+	if int(arr[1])>=m:
+		people.append(arr[0])
 
-f = int(input())
-for i in range(f):
-	d = input()
-	if d in arr:
-		for j in range(a*2):
-			if arr[j] == d:
-				print(arr[j+1])
-	else:
-		print(-1)
-		
+print(len(people))
+for i in range(len(people)):
+	print(people[i],end=' ')
